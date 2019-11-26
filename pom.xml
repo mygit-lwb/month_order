@@ -8,6 +8,7 @@
         <module>config_server</module>
         <module>feign_service</module>
         <module>order_service</module>
+        <module>order_api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
