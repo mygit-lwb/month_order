@@ -1,5 +1,6 @@
 package com.lianweibo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +24,8 @@ public class ProductDetail implements Serializable {
     private Integer aboutDay; // 预计天数
     private Integer reallyDay;  // 实际天数
     private String productExplain;    // 备注
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "orderId")
+    @JsonIgnore
     private Order order;
 }
